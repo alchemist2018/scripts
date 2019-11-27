@@ -53,13 +53,10 @@ rm -rf /x
 apk update
 apk add openssh
 echo PermitRootLogin yes >> /etc/ssh/sshd_config
+echo 'Port 64291' >> /etc/ssh/sshd_config
 rc-update add sshd default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
-
-#sh # (for example, run `passwd`)
-echo 'Port 64291' >> /etc/ssh/sshd_config
-passwd
 
 sync
 reboot -f
