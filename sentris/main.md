@@ -3,11 +3,13 @@ wget https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/ovz2
 chmod +x ovz2alpine.sh
 ./ovz2alpine.sh
 
+
 # setupRay2alpine
 apk add wget
 wget https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/setupRay2alpine.sh
 chmod +x setupRay2alpine.sh
 ./setupRay2alpine.sh
+
 
 # alpineReinstall
 apk add wget
