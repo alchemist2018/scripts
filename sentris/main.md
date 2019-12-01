@@ -11,9 +11,9 @@ chmod +x ovz2alpine.sh
 
 # setupRay2alpine
 
-apk add --no-cache curl
+apk add --no-cache wget
 
-curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/setupRay2alpine.sh
+wget https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/setupRay2alpine.sh
 
 chmod +x setupRay2alpine.sh
 
@@ -22,9 +22,9 @@ chmod +x setupRay2alpine.sh
 
 # alpineReinstall
 
-apk add --no-cache curl
+apk add --no-cache wget
 
-curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/alpineReinstall.sh
+wget https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/alpineReinstall.sh
 
 chmod +x alpineReinstall.sh
 
