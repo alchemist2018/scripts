@@ -1,0 +1,30 @@
+{
+    "dns": {
+        "servers": [
+            "8.8.4.4",
+            "1.0.0.1"
+        ]
+    },
+    "inbounds": [
+        {
+            "port": 80,
+            "listen": "0.0.0.0",
+            "protocol": "shadowsocks",
+            "settings": {
+                "method": "chacha20-ietf-poly1305",
+                "password": "wojiamimashiduoshao"
+            },
+            "streamSettings": {
+                "network": "ws"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIPv4"
+            }
+        }
+    ]
+}
