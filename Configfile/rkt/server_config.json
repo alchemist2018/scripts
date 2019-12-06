@@ -2,8 +2,8 @@
     "server": "0.0.0.0",
     "server_port": 80,
     "password": "wojiamimashiduoshao",
-    "method": "chacha20-ietf-poly1305",
+    "method": "rc4-md5",
     "nameserver": "8.8.4.4",
-    "plugin": "/v2ray-plugin/v2ray-plugin_linux_amd64",
-    "plugin_opts": "server"
+    "plugin": "obfs-server",
+    "plugin_opts": "obfs=http"
 }
