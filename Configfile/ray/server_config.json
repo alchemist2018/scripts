@@ -1,4 +1,9 @@
 {
+    "dns": {
+        "servers": [
+            "8.8.4.4"
+        ]
+    },
     "inbounds": [
         {
             "port": 80,
@@ -15,7 +20,10 @@
     ],
     "outbounds": [
         {
-            "protocol": "freedom"
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIPv4"
+            }
         }
     ]
 }
