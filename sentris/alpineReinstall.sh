@@ -40,7 +40,6 @@ up ip route add default dev $dev
  
 hostname $hostname
 EOF
-echo 'nameserver 1.1.1.1' >> /x/etc/resolv.conf
  
 # remove all old files and replace with alpine rootfs
 find / \( ! -path '/dev/*' -and ! -path '/proc/*' -and ! -path '/sys/*' -and ! -path '/x/*' \) -delete || true
