@@ -8,7 +8,7 @@ rm -rf /v2ray/v2ray.zip
 rm -rf /v2ray/config.json
 rm -rf /v2ray/geoip.dat
 rm -rf /v2ray/geosite.dat 
-curl -L -H "Cache-Control: no-cache" -o /v2ray/config.json https://raw.githubusercontent.com/alchemist2018/Ray_PaaS/master/config/server_config.json
+curl -L -H "Cache-Control: no-cache" -o /v2ray/config.json https://raw.githubusercontent.com/alchemist2018/scripts/master/Configfile/ray/server_config.json
 apk del .build-deps
 echo 'nohup /v2ray/v2ray &' > /etc/local.d/v2ray.start
 chmod +x /etc/local.d/v2ray.start
