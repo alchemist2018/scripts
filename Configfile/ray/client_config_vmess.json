@@ -36,15 +36,7 @@
                     "headers": {
                         "host": ""
                     }
-                },
-                "tlsSettings": {
-                    "allowInsecure": false,
-                    "alpn": [
-                      "http/1.1"
-                    ],
-                    "serverName": "",
-                    "allowInsecureCiphers": false
-                  }
+                }
             }
         },
         {
