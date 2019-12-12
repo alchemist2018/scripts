@@ -1,0 +1,33 @@
+{
+    "dns": {
+        "servers": [
+            "8.8.4.4"
+        ]
+    },
+    "inbounds": [
+        {
+            "port": 80,
+            "listen": "0.0.0.0",
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "11c4bcb9-36cf-4ade-8385-d42605cba2b5",
+                        "alterId": 0
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIPv4"
+            }
+        }
+    ]
+}
