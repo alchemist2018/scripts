@@ -1,5 +1,5 @@
-var proxy = 'PROXY 127.0.0.1:1080';
-var direct = 'DIRECT';
+var proxy = "PROXY 127.0.0.1:1080";
+var direct = "DIRECT";
 
 var hasOwnProperty = Object.hasOwnProperty;
 
