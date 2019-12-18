@@ -35,7 +35,8 @@
                 "wsSettings": {
                     "headers": {
                         "host": ""
-                    }
+                    },
+                    "path": "/wechat"
                 }
             }
         },
