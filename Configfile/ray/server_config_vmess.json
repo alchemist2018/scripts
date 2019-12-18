@@ -20,7 +20,7 @@
             "streamSettings": {
                 "network": "ws",
                 "wsSettings": {
-                    "path": "/wechat"
+                    "path": "/en-us/investors.html"
                 }
             }
         }
