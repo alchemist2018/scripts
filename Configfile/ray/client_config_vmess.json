@@ -18,7 +18,7 @@
                 "vnext": [
                     {
                         "address": "",
-                        "port": 443,
+                        "port": 12345,
                         "users": [
                             {
                                 "id": "11c4bcb9-36cf-4ade-8385-d42605cba2b5",
@@ -31,7 +31,7 @@
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "tls",
+                "security": "none",
                 "wsSettings": {
                     "headers": {
                         "host": ""
