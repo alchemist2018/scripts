@@ -11,8 +11,6 @@ curl -L -H "Cache-Control: no-cache" -o /v2ray/config.json https://raw.githubuse
 apk del .build-deps
 echo 'nohup /v2ray/v2ray &' > /etc/local.d/v2ray.start
 chmod +x /etc/local.d/v2ray.start
-echo "echo -e 'nameserver 8.8.4.4\nnameserver 1.0.0.1' >/etc/resolv.conf" >/etc/local.d/dns.start
-chmod +x /etc/local.d/dns.start
 rc-update add local
 sync
 reboot -f
