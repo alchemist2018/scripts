@@ -3,7 +3,6 @@
     "server_port": 80,
     "password": "wojiamimashiduoshao",
     "method": "chacha20-ietf-poly1305",
-    "nameserver": "8.8.4.4",
     "plugin": "obfs-server",
     "plugin_opts": "obfs=http"
 }
