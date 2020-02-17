@@ -3,6 +3,7 @@
     "server_port": 80,
     "password": "wojiamimashiduoshao",
     "method": "rc4-md5",
+    "nameserver": "8.8.8.8",
     "plugin": "obfs-server",
     "plugin_opts": "obfs=http"
 }
