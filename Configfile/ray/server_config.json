@@ -1,8 +1,7 @@
 {
     "dns": {
         "servers": [
-            "8.8.4.4",
-            "8.8.8.8"
+            "https+local://dns.adguard.com/dns-query"
         ]
     },
     "inbounds": [
