@@ -1,8 +1,6 @@
 # ovz2alpine
 
-apk add --no-cache curl
-
-curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/ovz2alpine.sh
+wget --no-check-certificate https://raw.githubusercontent.com/alchemist2018/scripts/master/sentris/ovz2alpine.sh
 
 chmod +x ovz2alpine.sh
 
