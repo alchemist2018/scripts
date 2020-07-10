@@ -6,13 +6,13 @@
 rm -rf /x
 rm -f /rootfs.tar.xz;
 
-server=http://images.linuxcontainers.org
-path=$(wget -O- ${server}/meta/1.0/index-system | \
-grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64") {print $NF}' | tail -1)
+#server=http://images.linuxcontainers.org
+#path=$(wget -O- ${server}/meta/1.0/index-system | \
+#grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64") {print $NF}' | tail -1)
 
 cd /
 mkdir /x
-wget ${server}/${path}/rootfs.tar.xz
+wget http://us.images.linuxcontainers.org/images/alpine/3.12/amd64/default/20200710_13:00/rootfs.tar.xz
 tar -C /x -xf rootfs.tar.xz
  
 sed -i '/getty/d' /x/etc/inittab
