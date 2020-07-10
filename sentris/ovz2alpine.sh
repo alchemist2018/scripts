@@ -1,6 +1,15 @@
+#!/bin/sh -e
+# Converts OpenVZ VPS to Alpine Linux
+# WARNING: This script will wipe any data in your VPS!
+# GPLv2; Partly based on https://gitlab.com/drizzt/vps2arch
+
+server=http://images.linuxcontainers.org
+path=$(wget -O- ${server}/meta/1.0/index-system | \
+grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64") {print $NF}' | tail -1)
+
 cd /
 mkdir /x
-wget http://us.images.linuxcontainers.org/images/alpine/3.11/amd64/default/20200507_13:00/rootfs.tar.xz
+wget ${server}/${path}/rootfs.tar.xz
 tar -C /x -xf rootfs.tar.xz
  
 sed -i '/getty/d' /x/etc/inittab
@@ -28,6 +37,7 @@ up ip route add default dev $dev
  
 hostname $hostname
 EOF
+cp /etc/resolv.conf /x/etc/resolv.conf
  
 # remove all old files and replace with alpine rootfs
 find / \( ! -path '/dev/*' -and ! -path '/proc/*' -and ! -path '/sys/*' -and ! -path '/x/*' \) -delete || true
@@ -38,12 +48,12 @@ export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 rm -rf /x
  
 apk update
-apk add openssh
+apk add openssh bash
 echo PermitRootLogin yes >> /etc/ssh/sshd_config
-echo 'Port 64291' >> /etc/ssh/sshd_config
 rc-update add sshd default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
+#sh # (for example, run `passwd`)
 
 sync
 reboot -f
