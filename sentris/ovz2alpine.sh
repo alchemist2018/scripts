@@ -55,6 +55,7 @@ rm -rf /x
 apk update
 apk add openssh bash
 echo PermitRootLogin yes >> /etc/ssh/sshd_config
+echo 'Port 64291' >> /etc/ssh/sshd_config
 rc-update add sshd default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
