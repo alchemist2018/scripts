@@ -12,7 +12,7 @@ rm -f /rootfs.tar.xz;
 
 cd /
 mkdir /x
-wget http://us.images.linuxcontainers.org/images/alpine/3.12/amd64/default/20200710_13:00/rootfs.tar.xz
+wget http://us.images.linuxcontainers.org/images/alpine/3.12/amd64/default/20200924_13:00/rootfs.tar.xz
 tar -C /x -xf rootfs.tar.xz
  
 sed -i '/getty/d' /x/etc/inittab
