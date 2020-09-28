@@ -1,21 +1,17 @@
 #!/bin/sh -e
-# Converts OpenVZ VPS to Alpine Linux
-# WARNING: This script will wipe any data in your VPS!
-# GPLv2; Partly based on https://gitlab.com/drizzt/vps2arch
 
-#server=http://images.linuxcontainers.org
-#path=$(wget -O- ${server}/meta/1.0/index-system | \
-#grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64") {print $NF}' | tail -1)
-
+#配置镜像路径
 server=http://images.linuxcontainers.org
 path=$(wget -O- ${server}/meta/1.0/index-system | \
 grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64" && $2!="3.9") {print $NF}' | tail -1)
 
+#下载镜像
 cd /
 mkdir /x
 wget ${server}/${path}/rootfs.tar.xz
 tar -C /x -xf rootfs.tar.xz
- 
+
+#配置镜像
 sed -i '/getty/d' /x/etc/inittab
 sed -i 's/rc_sys="lxc"/rc_sys="openvz"/' /x/etc/rc.conf
 
@@ -42,7 +38,7 @@ up ip route add default dev $dev
 hostname $hostname
 EOF
 cp /etc/resolv.conf /x/etc/resolv.conf
- 
+
 # remove all old files and replace with alpine rootfs
 find / \( ! -path '/dev/*' -and ! -path '/proc/*' -and ! -path '/sys/*' -and ! -path '/x/*' \) -delete || true
  
