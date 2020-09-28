@@ -7,8 +7,6 @@
 #path=$(wget -O- ${server}/meta/1.0/index-system | \
 #grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64") {print $NF}' | tail -1)
 
-yum install -y xz
-
 server=http://images.linuxcontainers.org
 path=$(wget -O- ${server}/meta/1.0/index-system | \
 grep -v edge | awk '-F;' '($1=="alpine" && $3=="amd64" && $2!="3.9") {print $NF}' | tail -1)
