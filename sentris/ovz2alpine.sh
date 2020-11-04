@@ -49,7 +49,7 @@ rm -rf /x
  
 apk update
 apk add dropbear
-echo 'DROPBEAR_OPTS="-p 64291" ' > /etc/ssh/sshd_config
+echo 'DROPBEAR_OPTS="-p 64291" ' > /etc/conf.d/dropbear
 rc-update add dropbear default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
