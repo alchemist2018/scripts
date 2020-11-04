@@ -37,7 +37,7 @@ up ip route add default dev $dev
  
 hostname $hostname
 EOF
-cp /etc/resolv.conf /x/etc/resolv.conf
+echo 'nameserver 8.8.4.4' > /x/etc/resolv.conf
 
 # remove all old files and replace with alpine rootfs
 find / \( ! -path '/dev/*' -and ! -path '/proc/*' -and ! -path '/sys/*' -and ! -path '/x/*' \) -delete || true
@@ -48,10 +48,9 @@ export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 rm -rf /x
  
 apk update
-apk add openssh bash
-echo PermitRootLogin yes >> /etc/ssh/sshd_config
-echo 'Port 64291' >> /etc/ssh/sshd_config
-rc-update add sshd default
+apk add dropbear
+echo 'DROPBEAR_OPTS="-p 64433" ' > /etc/ssh/sshd_config
+rc-update add dropbear default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
 #sh # (for example, run `passwd`)
