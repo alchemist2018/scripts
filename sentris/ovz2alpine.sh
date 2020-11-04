@@ -37,7 +37,7 @@ up ip route add default dev $dev
  
 hostname $hostname
 EOF
-echo 'nameserver 8.8.4.4' > /x/etc/resolv.conf
+echo 'nameserver 1.1.1.1' > /x/etc/resolv.conf
 
 # remove all old files and replace with alpine rootfs
 find / \( ! -path '/dev/*' -and ! -path '/proc/*' -and ! -path '/sys/*' -and ! -path '/x/*' \) -delete || true
@@ -49,7 +49,7 @@ rm -rf /x
  
 apk update
 apk add dropbear
-echo 'DROPBEAR_OPTS="-p 64433" ' > /etc/ssh/sshd_config
+echo 'DROPBEAR_OPTS="-p 64291" ' > /etc/ssh/sshd_config
 rc-update add dropbear default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
