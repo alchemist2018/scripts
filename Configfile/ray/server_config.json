@@ -52,8 +52,8 @@
             "streamSettings": {
                 "network": "mkcp",
                 "kcpSettings": {
-                    "uplinkCapacity": 50,
-                    "downlinkCapacity": 50,
+                    "uplinkCapacity": 10,
+                    "downlinkCapacity": 10,
                     "congestion": true,
                     "header": {
                         "type": "srtp"
