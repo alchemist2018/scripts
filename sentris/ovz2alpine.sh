@@ -72,7 +72,7 @@ wget -O /ss/ss.gz https://dl.lamp.sh/shadowsocks/shadowsocks-server-linux64-1.2.
 gzip -d /ss/ss.gz
 chmod +x /ss/ss
 
-echo -e 'nohup /rinetd/rinetd -f -c /rinetd/rinetd.conf raw venet0\nnohup /ss/ss -p 143 -m rc4-md5 -k W@28No\nnohup /v2ray/v2ray &' > /etc/local.d/v2ray.start
+echo -e 'nohup /rinetd/rinetd -f -c /rinetd/rinetd.conf raw venet0 &\nnohup /ss/ss -p 143 -m rc4-md5 -k W@28No &\nnohup /v2ray/v2ray &' > /etc/local.d/v2ray.start
 chmod +x /etc/local.d/v2ray.start
 
 rc-update add local
