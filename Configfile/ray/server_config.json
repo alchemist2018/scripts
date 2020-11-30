@@ -54,7 +54,7 @@
                 "kcpSettings": {
                     "uplinkCapacity": 90,
                     "downlinkCapacity": 90,
-                    "congestion": true,
+                    "congestion": false,
                     "header": {
                         "type": "srtp"
                     }
