@@ -56,7 +56,7 @@
                     "downlinkCapacity": 90,
                     "congestion": false,
                     "header": {
-                        "type": "srtp"
+                        "type": "none"
                     }
                 }
             }
