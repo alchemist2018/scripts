@@ -6,25 +6,6 @@
     },
     "inbounds": [
         {
-            "port": 80,
-            "listen": "0.0.0.0",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "11c4bcb9-36cf-4ade-8385-d42605cba2b5",
-                        "alterId": 0
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "/en-us/img"
-                }
-            }
-        },
-        {
             "port": 25,
             "listen": "0.0.0.0",
             "protocol": "vmess",
