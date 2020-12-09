@@ -38,7 +38,7 @@
             }            
         },
         {
-            "port": 16399,
+            "port": 27015,
             "listen": "0.0.0.0",
             "protocol": "vmess",
             "settings": {
