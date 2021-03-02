@@ -1,19 +1,8 @@
 {
     "dns": {
         "servers": [
-            {
-      "address": "208.67.222.222",
-      "port": 5353,
-      "domains": [
-        "domain:v2ray.com"
-      ],
-      "expectIPs": [
-        "geoip:cn"
-      ],
-    },
-    "8.8.8.8",
-    "8.8.4.4",
-    "localhost"
+            "https+local://doh.opendns.com/dns-query",
+            "208.67.222.222"
         ]
     },
     "inbounds": [
