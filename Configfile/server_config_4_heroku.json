@@ -1,7 +1,7 @@
 {
     "dns": {
         "servers": [
-            "https+local://doh.familyshield.opendns.com/dns-query"
+            "https+local://doh.opendns.com/dns-query"
         ]
     },
     "inbounds": [
