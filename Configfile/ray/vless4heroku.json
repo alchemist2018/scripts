@@ -1,7 +1,7 @@
 {
     "dns": {
         "servers": [
-            "https+local://dns.google/dns-query"
+            "https+local://doh.opendns.com/dns-query"
         ]
     },
     "inbounds": [
